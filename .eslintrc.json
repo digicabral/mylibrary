@@ -1,0 +1,69 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "jsdoc"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsdoc/recommended"
+  ],
+  "rules": {
+    "curly": ["error", "multi"],
+    "default-param-last": "warn",
+    "eqeqeq": "warn",
+    "one-var": ["error", "never"],
+    "prefer-const": "error",
+    "prefer-destructuring": "warn",
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "sort-vars": "warn",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "jsdoc/require-jsdoc": "off",
+    "no-duplicate-imports": "warn",
+    "no-else-return": "warn",
+    "no-multiple-empty-lines": "error",
+    "no-param-reassign": ["error"],
+    "no-return-await": "warn",
+    "no-trailing-spaces": "error",
+    "no-undef-init": "error",
+    "no-unneeded-ternary": "error",
+    "no-var": "error",
+    "no-console": "warn",
+    "no-process-env": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "group": ["packages/*"],
+            "message": "Importing another file in a non-relative way is not allowed."
+          },
+          {
+            "group": ["../**/src/**", "!../**/davinci/src/**"],
+            "message": "Importing something from another package that is not publicly exported is not allowed."
+          },
+          {
+            "group": ["**/dist", "**/dist**"],
+            "message": "Importing build files is not allowed."
+          }
+        ]
+      }
+    ],
+    "no-restricted-exports": [
+      "error",
+      {
+        "restrictedNamedExports": [
+          "isValidArray",
+          "isValidBoolean",
+          "isValidObject",
+          "isValidVariable"
+        ]
+      }
+    ]
+  }
+}

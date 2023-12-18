@@ -1,0 +1,11 @@
+.log
+.DS_Store
+node_modules
+packages/**/dist
+packages/**/package-lock.json
+lerna-debug.log
+coverage
+*.lcov
+.vscode/launch.json
+
+.idea
