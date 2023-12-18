@@ -1,9 +1,9 @@
 {
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es2019",
-    "declaration": true,
-    "outDir": "./dist"
-  },
-  "include": ["src/**/*"]
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ESNext",
+        "declaration": true,
+        "outDir": "./dist"
+    },
+    "include": ["src/**/*"]
 }
